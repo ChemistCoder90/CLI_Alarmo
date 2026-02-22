@@ -21,6 +21,11 @@ public class Main {
       }
       
     }
+    if(LocalTime.now().isAfter(AlarmTime)){
+      System.out.println("Please Set Time after "+ LocalTime.now());
+      scan.close();
+      return;
+    }
     System.out.println("Your Alarm Set at: "+AlarmTime);
     LocalTime now;
     while(LocalTime.now().isBefore(AlarmTime)){
